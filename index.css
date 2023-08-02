@@ -1,0 +1,299 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    background-color: #303030;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.x-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+body {
+    background-color: dimgrey;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    min-height: 100vh
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-1 {
+    height: 75px;
+    width: 75px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dash {
+    height: 25px;
+    width: 75px;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dash-1 {
+    height: 25px;
+    width: 200px;
+    background-color: #bbb;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.dash-2 {
+    height: 40px;
+    width: 220px;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dash-3 {
+    height: 40px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dash-4 {
+    height: 2px;
+    width: 60%;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dash-5 {
+    height: 2px;
+    width: 80%;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+.dash-6 {
+    height: 25px;
+    /*width: 100%;*/
+    width: 90%;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dash-7{
+    height: 50px;
+    /*width: 100%;*/
+    width: 80%;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dash-8{
+    margin-left: 10%;
+    height: 50px;
+    width: 80%;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+}
+.checkbox-wrapper-21{
+    width: 100%;
+}
+
+.checkbox-wrapper-21 .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.checkbox-wrapper-21 .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox-wrapper-21 .control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+}
+
+.checkbox-wrapper-21 .control:hover input~.control__indicator,
+.checkbox-wrapper-21 .control input:focus~.control__indicator {
+    background: #ccc;
+}
+
+.checkbox-wrapper-21 .control input:checked~.control__indicator {
+    background: #2aa1c0;
+}
+
+.checkbox-wrapper-21 .control:hover input:not([disabled]):checked~.control__indicator,
+.checkbox-wrapper-21 .control input:checked:focus~.control__indicator {
+    background: #0e647d;
+}
+
+.checkbox-wrapper-21 .control input:disabled~.control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.checkbox-wrapper-21 .control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.checkbox-wrapper-21 .control input:checked~.control__indicator:after {
+    display: block;
+}
+
+.checkbox-wrapper-21 .control--checkbox .control__indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-wrapper-21 .control--checkbox input:disabled~.control__indicator:after {
+    border-color: #7b7b7b;
+}
+
+
+.first-line {
+    margin: 2rem auto;
+}
+
+.body {
+    flex: 1;
+}
+
+.contact {
+    grid-area: contact;
+    background-color: #888888;
+    /*padding: 20px;*/
+}
+
+.contact span{
+    margin: 20px;
+}
+
+.milestones{
+    grid-area: milestones;
+    background-color: #888888;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+    /*padding: 20px;*/
+    width: 100%;
+}
+
+.milestones .checkbox-wrapper-21{
+    margin: 20px;
+}
+
+.group-chat{
+    grid-area: group-chat;
+    background-color: #888888;
+    /*padding: 20px;*/
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+}
+.group-chat div{
+    margin: 20px;
+}
+
+.message{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+}
+
+.grid-content{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "contact milestones"
+    "group-chat milestones"
+}
+
+.footer {    
+    background-color: #888888;
+    display: flex;
+    min-height: 100px;
+    margin-top: 35px;
+}
+
+@media (max-width: 720px){
+   .first-line{
+    display: none;
+   }
+   .dash{
+    display: none;
+   }
+   .grid-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+   }
+   .dash-1{
+    border-radius: 4px;
+    width: 80px;
+   }
+   .contact{
+    width: 100%;
+   }
+   .milestones{
+    width: 100%;
+   }
+   .group-chat{
+    width: 100%;
+   } 
+   .x-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+}
+@media(max-width: 260px){
+    .dot-1{
+        display: none;
+    }
+}
